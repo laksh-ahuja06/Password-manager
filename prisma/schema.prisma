@@ -1,0 +1,30 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+enum VaultItemType {
+  PASSWORD
+  API_KEY
+}
+
+model VaultItem {
+  id               Int           @id @default(autoincrement())
+  type             VaultItemType
+  name             String
+  username         String?
+  label            String?
+  secretCiphertext String
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  deletedAt        DateTime?
+}
