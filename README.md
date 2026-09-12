@@ -1,37 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# How to start the password manager
 
-## Getting Started
+1) npm install
+2) npm install prisma @prisma/client @prisma/adapter-better-sqlite3 dotenv
+3) npm install prisma@latest @prisma/client@latest @prisma/adapter-better-sqlite3@latest
+4) npm install -D @types/better-sqlite3
+5) npm install --save-dev prisma@7.10.0 --save-exact
+6) npm install @prisma/client@7.10.0 --save-exact
+7) npx prisma generate
+8) npx prisma migrate deploy
+9) npm install electron concurrently cross-env wait-on
 
-First, run the development server:
+   
+### Better way:
+npm install
+npx prisma generate
+npx prisma migrate deploy
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## How to start prisma studio: 
+npx prisma studio --url="file:///Users/apple/Desktop/NextJS-Projects/Password-manager/password-manager/dev.db"
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Password-manager
+## .env file contents
+DATABASE_URL="file:./dev.db"
+VAULT_ENCRYPTION_KEY="dc0db5dc35f343634d20ab0b6e9899e9a9a905c8142f604b7b833d66d49948c6"
