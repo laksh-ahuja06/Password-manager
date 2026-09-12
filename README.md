@@ -22,3 +22,4 @@ npx prisma studio --url="file:///Users/apple/Desktop/NextJS-Projects/Password-ma
 ## .env file contents
 DATABASE_URL="file:./dev.db"
 VAULT_ENCRYPTION_KEY="dc0db5dc35f343634d20ab0b6e9899e9a9a905c8142f604b7b833d66d49948c6"
+# Password-manager-using-Electron
