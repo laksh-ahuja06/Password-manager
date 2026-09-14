@@ -68,6 +68,7 @@ npx prisma studio --url="file:///(File directory)/password-manager/dev.db"
 ## .env file contents (add this to the .env which was created by the initialization commands)
 ```text
 DATABASE_URL="file:./dev.db"
+VAULT_ENCRYPTION_KEY="YOUR_ENCRYPTION_KEY"
 ```
 
 ## Database structure
