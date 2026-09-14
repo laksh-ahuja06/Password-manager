@@ -57,8 +57,15 @@ VAULT_ENCRYPTION_KEY="dc0db5dc35f343634d20ab0b6e9899e9a9a905c8142f604b7b833d66d4
 ## Database structure
 
 <p align="center">
-  <img src="Structure.png" alt="DBStructure" width="800">
+  <img src="Structure.png" alt="DBStructure" width="250">
 </p>
+
+The project follows a modular Next.js App Router architecture, separating UI components, application routes, API endpoints, database logic, and desktop functionality into dedicated folders. This keeps the codebase organized, maintainable, and easier to scale.
+
+<b>app/vault — </b> Contains the main password-vault interface/page where users can view and manage their stored credentials. <br>
+<b>app/api/vault — </b> Contains the backend API routes responsible for handling vault-related operations such as retrieving, creating, updating, or deleting credentials. <br>
+<b>electron/ — </b> Contains the Electron configuration and desktop-process code that wraps the Next.js application into a desktop application. <br>
+<b>prisma/ — </b> Contains the Prisma database schema and migration files used to define and manage the application's database structure. <br>
 
 
 
