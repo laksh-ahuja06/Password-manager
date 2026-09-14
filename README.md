@@ -56,5 +56,10 @@ VAULT_ENCRYPTION_KEY="dc0db5dc35f343634d20ab0b6e9899e9a9a905c8142f604b7b833d66d4
 
 ## Database structure
 
+<p align="center">
+  <img src="Structure.png" alt="DBStructure" width="800">
+</p>
+
+
 
 
