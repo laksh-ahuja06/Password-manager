@@ -9,6 +9,16 @@
 
 This project is a desktop password manager built with Next.js and Electron for securely managing passwords and API keys in one place. It provides a clean interface for organizing, viewing, and managing sensitive credentials. The application combines a modern Next.js frontend with Electron to deliver a cross-platform desktop experience. It also uses Prisma for database management and persistent storage.
 
+## Features
+
+- 🔐 Password management
+- 🔑 API key management
+- 🗂️ Organized password vault
+- 🗑️ Trash/deleted items management
+- 💾 Local SQLite database
+- 🖥️ Desktop application using Electron
+- 🗄️ Prisma ORM for database management
+
 ## Images:
 
 <p align="center">
@@ -21,7 +31,7 @@ This project is a desktop password manager built with Next.js and Electron for s
 
 ## How to start the password manager
 
-```text
+```bash
 1) npm install
 2) npm install prisma @prisma/client @prisma/adapter-better-sqlite3 dotenv
 3) npm install prisma@latest @prisma/client@latest @prisma/adapter-better-sqlite3@latest
@@ -31,6 +41,13 @@ This project is a desktop password manager built with Next.js and Electron for s
 7) npx prisma generate
 8) npx prisma migrate deploy
 9) npm install electron concurrently cross-env wait-on
+```
+
+Run the server:
+
+```bash
+cd Password-manager
+npm run dev
 ```
 
 ## How to start prisma studio: 
@@ -51,7 +68,6 @@ npx prisma studio --url="file:///(File directory)/password-manager/dev.db"
 ## .env file contents (add this to the .env which was created by the initialization commands)
 ```text
 DATABASE_URL="file:./dev.db"
-VAULT_ENCRYPTION_KEY="dc0db5dc35f343634d20ab0b6e9899e9a9a905c8142f604b7b833d66d49948c6"
 ```
 
 ## Database structure
